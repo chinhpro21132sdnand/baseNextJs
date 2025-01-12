@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+}
+
+
+.ant-menu-title-content, .ant-menu-item-icon {
+  color: #a4b2bd !important; /* Màu chữ mặc định */
+}
+
+/* Thay đổi màu khi hover */
+.ant-menu-title-content:hover, .ant-menu-item-icon:hover {
+  color: #ffffff !important; /* Màu chữ khi hover */
+}
+.ant-menu-item-group-title{
+  color: #ffffff !important;
+}
