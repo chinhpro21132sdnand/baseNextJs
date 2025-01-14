@@ -7,7 +7,7 @@ const AdminFooter = () => {
     return (
         <>
             <Footer style={{ textAlign: 'center' }}>
-                Hỏi Dân IT ©{new Date().getFullYear()} Created by @hoidanit
+                BASE NEXTJS ©{new Date().getFullYear()} Created by @tienchinhjr
             </Footer>
         </>
     )

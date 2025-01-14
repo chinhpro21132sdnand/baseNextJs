@@ -2,15 +2,49 @@
   margin: 0;
 }
 
-
-.ant-menu-title-content, .ant-menu-item-icon {
+.ant-menu-title-content,
+.ant-menu-item-icon,
+.ant-menu-submenu-arrow {
   color: #a4b2bd !important; /* Màu chữ mặc định */
 }
 
 /* Thay đổi màu khi hover */
-.ant-menu-title-content:hover, .ant-menu-item-icon:hover {
+.ant-menu-title-content:hover,
+.ant-menu-item-icon:hover,
+.ant-menu-submenu-arrow {
   color: #ffffff !important; /* Màu chữ khi hover */
 }
-.ant-menu-item-group-title{
+.ant-menu-item-group-title {
   color: #ffffff !important;
+}
+:where(.css-dev-only-do-not-override-7ny38l).ant-menu-light
+  .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-7ny38l).ant-menu-light
+  > .ant-menu
+  .ant-menu-item-selected {
+  background-color: #1d2530 !important;
+}
+.sider {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.MenuItem::-webkit-scrollbar {
+  width: 8px;
+  background-color: #333;
+}
+
+.MenuItem::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+.MenuItem::-webkit-scrollbar-track {
+  background-color: #000;
+}
+.sider {
+  min-width: 300px !important;
+  flex: 0 0 300px !important;
+  max-width: 300px !important;
 }
