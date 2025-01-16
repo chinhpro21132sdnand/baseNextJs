@@ -23,10 +23,9 @@ const AdminCard: React.FC = () => {
     height: 400,
     xField: "year",
     yField: "value",
-    smooth: true, // Đường cong mượt
+    smooth: true, 
   };
 
-  // Dữ liệu biểu đồ tròn
   const data2 = [
     { type: "Loại A", value: 27 },
     { type: "Loại B", value: 25 },
@@ -38,7 +37,7 @@ const AdminCard: React.FC = () => {
 
   const config2 = {
     appendPadding: 10,
-    data: data2, // Sử dụng đúng biến dữ liệu
+    data: data2, 
     angleField: "value",
     colorField: "type",
     radius: 1,

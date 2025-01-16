@@ -5,11 +5,14 @@ import { Button, Card, Table, Tag } from "antd";
 import { Input } from "antd";
 import { Select } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PaginationComponent from "../common/pagination/page";
+import { useCallback, useState } from "react";
 
 interface SelectActive {
   value: number;
   text: string;
 }
+
 const UserTable = () => {
   const dataSource = [
     {
@@ -32,12 +35,97 @@ const UserTable = () => {
         text: "Khóa",
       },
     },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+      acctive: {
+        value: 2,
+        text: "Khóa",
+      },
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+      acctive: {
+        value: 2,
+        text: "Khóa",
+      },
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+      acctive: {
+        value: 2,
+        text: "Khóa",
+      },
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+      acctive: {
+        value: 2,
+        text: "Khóa",
+      },
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+      acctive: {
+        value: 2,
+        text: "Khóa",
+      },
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+      acctive: {
+        value: 2,
+        text: "Khóa",
+      },
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+      acctive: {
+        value: 2,
+        text: "Khóa",
+      },
+    },
+    
   ];
-
+  const  [PageSize,getPagesize]=useState(10);
+  const [total,getTotal]=useState(1)
+  const handlePageChange = useCallback(
+    (page: number, total: number) => {
+      getPagesize(page);
+      getTotal(total);
+    },
+    [getPagesize, getTotal] 
+  );
   return (
     <>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'flex-end',
+        marginBottom :'20px'
+      }}>
+      <Button >Create User</Button>
+        </div>
       <Card>
-        <Button>Create User</Button>
         <div
           style={{
             display: "flex",
@@ -46,7 +134,7 @@ const UserTable = () => {
             marginBottom: 20,
           }}
         >
-          <span>Manager Users</span>
+          <h3>Manager Users</h3>
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <Input
               size="large"
@@ -68,7 +156,7 @@ const UserTable = () => {
             />
           </div>
         </div>
-        <Table dataSource={dataSource}>
+        <Table scroll={{ y: 400 }} dataSource={dataSource} pagination={false} className="custom-scroll-table"  >
           <Column title="Name" dataIndex="name" key="name" />
           <Column title="Age" dataIndex="age" key="age" />
           <Column title="Address" dataIndex="address" key="address" />
@@ -88,6 +176,7 @@ const UserTable = () => {
             render={() => <FontAwesomeIcon icon="ellipsis-vertical" />}
           />
         </Table>
+        <PaginationComponent PageSize={PageSize} total={total}  onChange={handlePageChange}/>
       </Card>
     </>
   );
