@@ -1,9 +1,8 @@
 import AdminContent from "@/components/layout/admin.content";
-import AdminFooter from "@/components/layout/admin.footer";
 import AdminHeader from "@/components/layout/admin.header";
 import AdminSideBar from "@/components/layout/admin.sidebar";
 import { AdminContextProvider } from "@/library/admin.context";
-
+import "@/img/fontIcons";
 const AdminLayout = ({
   children,
 }: Readonly<{
@@ -18,7 +17,6 @@ const AdminLayout = ({
         <div className="right-side" style={{ flex: 1 }}>
           <AdminHeader />
           <AdminContent>{children}</AdminContent>
-          <AdminFooter />
         </div>
       </div>
     </AdminContextProvider>

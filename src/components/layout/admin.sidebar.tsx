@@ -29,13 +29,13 @@ const AdminSideBar = () => {
           icon: <AppstoreOutlined />,
         },
         {
-          key: "users",
+          key: "Users",
           label: <Link href={"/dashboard/user"}>Manage Users</Link>,
           icon: <TeamOutlined />,
         },
         {
-          key: "sub1",
-          label: "Navigation One",
+          key: "Quản lý khách hàng",
+          label: "Quản lý khách hàng",
           icon: <MailOutlined />,
           children: [
             {
@@ -59,8 +59,8 @@ const AdminSideBar = () => {
           ],
         },
         {
-          key: "sub2",
-          label: "Navigation Two",
+          key: "Quản lý tài khoản",
+          label: "Quản lý tài khoản",
           icon: <AppstoreOutlined />,
           children: [
             { key: "5", label: "Option 5" },
@@ -79,8 +79,8 @@ const AdminSideBar = () => {
           type: "divider",
         },
         {
-          key: "sub4",
-          label: "Navigation Three",
+          key: "Quản lý crypto",
+          label: "Quản lý crypto",
           icon: <SettingOutlined />,
           children: [
             { key: "9", label: "Option 9" },
