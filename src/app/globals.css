@@ -7,6 +7,10 @@
 span {
   font-size: 14px;
 }
+.ant-btn {
+  color: #ffffff;
+  background: rgb(0, 0, 0);
+}
 .ant-menu-title-content,
 .ant-menu-item-icon,
 .ant-menu-submenu-arrow {
@@ -34,7 +38,7 @@ span {
 }
 
 .custom-scroll-table::-webkit-scrollbar-thumb {
-  background-color: #888 !important; 
+  background-color: #888 !important;
   border-radius: 4px !important; /* Bo góc cho thanh cuộn */
 }
 

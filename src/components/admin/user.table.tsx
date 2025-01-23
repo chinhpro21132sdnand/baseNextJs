@@ -105,26 +105,27 @@ const UserTable = () => {
         text: "Khóa",
       },
     },
-    
   ];
-  const  [PageSize,getPagesize]=useState(10);
-  const [total,getTotal]=useState(1)
+  const [PageSize, getPagesize] = useState(10);
+  const [total, getTotal] = useState(1);
   const handlePageChange = useCallback(
     (page: number, total: number) => {
       getPagesize(page);
       getTotal(total);
     },
-    [getPagesize, getTotal] 
+    [getPagesize, getTotal]
   );
   return (
     <>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'flex-end',
-        marginBottom :'20px'
-      }}>
-      <Button >Create User</Button>
-        </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          marginBottom: "20px",
+        }}
+      >
+        <Button>Create User</Button>
+      </div>
       <Card>
         <div
           style={{
@@ -156,7 +157,12 @@ const UserTable = () => {
             />
           </div>
         </div>
-        <Table scroll={{ y: 400 }} dataSource={dataSource} pagination={false} className="custom-scroll-table"  >
+        <Table
+          scroll={{ y: 310 }}
+          dataSource={dataSource}
+          pagination={false}
+          className="custom-scroll-table"
+        >
           <Column title="Name" dataIndex="name" key="name" />
           <Column title="Age" dataIndex="age" key="age" />
           <Column title="Address" dataIndex="address" key="address" />
@@ -176,7 +182,11 @@ const UserTable = () => {
             render={() => <FontAwesomeIcon icon="ellipsis-vertical" />}
           />
         </Table>
-        <PaginationComponent PageSize={PageSize} total={total}  onChange={handlePageChange}/>
+        <PaginationComponent
+          PageSize={PageSize}
+          total={total}
+          onChange={handlePageChange}
+        />
       </Card>
     </>
   );
